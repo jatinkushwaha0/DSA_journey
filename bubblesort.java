@@ -1,21 +1,37 @@
-public class bubblesort {
-    public static void bubbleSort(int arr[]) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length- i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class bubblesort{
+    public static int search(int i[] , int j[]){
+        for(int k=0;k<j.length;k++){
+            if(i[1]==j[k]){
+                System.out.println("YES");
+            }else{
+                System.out.println("NO");
             }
         }
+        return -1;
     }
-    public static void main(String[] args) {
-        int arr[] = {1,4,5,5,3,2,4};
-        bubbleSort(arr);
-        for (int i =1;i<arr.length;i++) {
-            System.out.print(i + " ");
+	public static void main (String[] args){
+	Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
-    }
+        int v = sc.nextInt();
+        int arrd[] = new int[v];
+        for(int j = 0; j < v; j++) {
+            arrd[j] = sc.nextInt();
+        }
+        for(int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+          System.out.println();
+         for(int j = 0; j < v; j++) {
+               System.out.print(arrd[j] + " ");
+         }
+         sc.close();
+        search();
+	}
 }
-
