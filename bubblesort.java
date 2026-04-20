@@ -1,6 +1,4 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 class bubblesort{
     public static int search(int i[] , int j[]){
         for(int k=0;k<j.length;k++){
